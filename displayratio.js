@@ -1,10 +1,15 @@
 // ==UserScript==
 // @name         Coin Marketcap volume to market cap column
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.2
 // @description  Add volume to market cap ratio
-// @author       Dylan Boltz
+// @author       deelawn
 // @match        https://coinmarketcap.com/
+// @match        https://coinmarketcap.com/all/views/all/
+// @match        https://coinmarketcap.com/currencies/
+// @match        https://coinmarketcap.com/currencies/views/all/
+// @match        https://coinmarketcap.com/assets/
+// @match        https://coinmarketcap.com/assets/views/all/
 // @grant        none
 // @require      http://code.jquery.com/jquery-latest.js
 // ==/UserScript==
@@ -22,11 +27,11 @@
         $("th[id='th-volume']").after(ratioHdrDef);
 
         $("tbody").children("tr").each(function(){
-            var marketCapUSD = $(":nth-child(3)", this).attr("data-usd");
-            var dailyVolUSD = $(":nth-child(6) a", this).attr("data-usd");
+            var marketCapUSD = $(" > td.market-cap", this).attr("data-usd");
+            var dailyVolUSD = $(" > td > a.volume", this).attr("data-usd");
             var ratioVal = ((dailyVolUSD / marketCapUSD) * 100).toFixed(2);
             var ratioCellDef = "<td class=\"no-wrap ratio text-right\" data-usd=\"" + ratioVal + "\">" + ratioVal + "%</td>";
-            $(":nth-child(6)", this).after(ratioCellDef);
+            $(" > td > a.volume", this).parent().after(ratioCellDef);
         });
     });
 })();
