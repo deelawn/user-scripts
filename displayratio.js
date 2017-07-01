@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name         Coin Marketcap volume to market cap column
-// @namespace    http://tampermonkey.net/
-// @version      0.2
+// @name         Coin Market Cap volume to market cap column
+// @namespace    https://github.com/deelawn/coinmarketcapratio
+// @version      0.3
 // @description  Add volume to market cap ratio
 // @author       deelawn
 // @match        https://coinmarketcap.com/
