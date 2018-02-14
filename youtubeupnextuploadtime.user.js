@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Youtube Up Next Time Since Upload
-// @namespace    http://tampermonkey.net/
+// @namespace    https://github.com/deelawn/user-scripts
 // @version      0.1
 // @description  In the up next queue on Youtube, include the time since upload as part of the displayed metadata
 // @author       deelawn
