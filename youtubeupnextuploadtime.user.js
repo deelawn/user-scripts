@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Youtube Up Next Time Since Upload
 // @namespace    https://github.com/deelawn/user-scripts
-// @version      0.1
+// @version      0.2
 // @description  In the up next queue on Youtube, include the time since upload as part of the displayed metadata
 // @author       deelawn
 // @include      /^http(s?)://((www\.)?)youtube\.com/watch(.*)$/
@@ -42,4 +42,4 @@ var myTimer = setInterval(
 
       $(" > a > ytd-video-meta-block > div[id='metadata'] > div[id='metadata-line'] > span", nextObj).after(timeSpan);
     });
-  }, 1000);
+  }, 3000);
