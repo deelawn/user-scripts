@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Coin Market Cap volume to market cap column
-// @namespace    https://github.com/deelawn/coinmarketcapratio
+// @namespace    https://github.com/deelawn/user-scripts
 // @version      0.3
 // @description  Add volume to market cap ratio
 // @author       deelawn
