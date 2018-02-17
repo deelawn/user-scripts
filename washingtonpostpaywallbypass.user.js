@@ -24,14 +24,13 @@ var myTimer = setInterval(
     }
 
     var articleDiv = document.getElementById(elemId).outerHTML;
-    console.log(articleDiv.length);
 
     if (articleDiv.length > lastDiv.length){
       lastDiv = articleDiv;
       return;
     }
 
-      articleDiv = lastDiv;
+    articleDiv = lastDiv;
 
     if (document.getElementById("wp_Signin").outerHTML == null){
       return;
