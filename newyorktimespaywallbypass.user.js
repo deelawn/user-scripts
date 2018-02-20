@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         New York Times Paywall Bypass
 // @namespace    https://github.com/deelawn/user-scripts
-// @version      0.1
+// @version      0.2
 // @description  Removes the New York Times paywall
 // @author       deelawn
 // @include      /^http(s?)://((www\.)?)nytimes\.com(.*)?/\d\d\d\d/(.+)$/
