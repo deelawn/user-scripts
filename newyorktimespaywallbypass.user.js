@@ -27,7 +27,7 @@ var myTimer = setInterval(
 
     articleDiv = lastDiv;
 
-    if (document.getElementById("gatewayCreative").outerHTML == null){
+    if (document.getElementById("gatewayCreative") == null){
       return;
     }
 
