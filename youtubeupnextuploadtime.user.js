@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Youtube Up Next Time Since Upload
 // @namespace    https://github.com/deelawn/user-scripts
-// @version      0.2
+// @version      0.3
 // @description  In the up next queue on Youtube, include the time since upload as part of the displayed metadata
 // @author       deelawn
 // @include      /^http(s?)://((www\.)?)youtube\.com/watch(.*)$/
@@ -36,7 +36,7 @@ var myTimer = setInterval(
       }
 
       var rawLabel = $(" > a > h3 > span", nextObj).attr("aria-label");
-      var regEx = /.*?\sby\s.*?\s(\d\s((year(s?))|(month(s?))|(day(s?))|(hour(s?))|(minute(s?))|(second(s?)))\sago)/;
+      var regEx = /.*?\sby\s.*?\s((\d+)\s((year(s?))|(month(s?))|(week(s?))|(day(s?))|(hour(s?))|(minute(s?))|(second(s?))))\sago/;
       var timeSinceUpload = regEx.exec(rawLabel)[1];
       var timeSpan = "<span id=\"time-since-upload\" class=\"style-scope ytd-video-meta-block\">".concat(timeSinceUpload.concat("</span>"));
 
