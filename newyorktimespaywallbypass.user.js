@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         New York Times Paywall Bypass
 // @namespace    https://github.com/deelawn/user-scripts
-// @version      0.2
+// @version      0.3
 // @description  Removes the New York Times paywall
 // @author       deelawn
 // @include      /^http(s?)://((www\.)?)nytimes\.com(.*)?/\d\d\d\d/(.+)$/
@@ -21,7 +21,6 @@ var myTimer = setInterval(
     }
 
     if (articleDiv.length > lastDiv.length){
-      lastDiv = articleDiv;
       return;
     }
 
@@ -31,9 +30,9 @@ var myTimer = setInterval(
       return;
     }
 
-    for(i=0;i<999;i++){clearInterval(i);}
+    for(var i=0;i<999;i++){clearInterval(i);}
     document.getElementById("gatewayCreative").outerHTML="";
-    $("body").css({"overflow":"visible"});
-    $("html").css({"overflow":"visible"});
+    document.querySelector("body").style.overflow = "visible";
+    document.querySelector("html").style.overflow = "visible";
     document.getElementById("main").outerHTML=articleDiv;
   }, 100);
