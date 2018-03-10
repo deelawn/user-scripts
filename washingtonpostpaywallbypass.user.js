@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Washinton Post Paywall Bypass
+// @name         Washington Post Paywall Bypass
 // @namespace    https://github.com/deelawn/user-scripts
 // @version      0.3
 // @description  Removes the Washington Post paywall
@@ -39,7 +39,7 @@ var myTimer = setInterval(
 
     document.getElementById("wp_Signin").outerHTML="";
     document.querySelector(".wp_signin").outerHTML="";
-    $("body").css({"overflow":"visible"});
+    document.querySelector("body").style.overflow="visible";
     document.getElementById(elemId).outerHTML=articleDiv;
     clearInterval(myTimer);
   }, 100);
