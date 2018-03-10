@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Washington Post Paywall Bypass
 // @namespace    https://github.com/deelawn/user-scripts
-// @version      0.3
+// @version      0.4
 // @description  Removes the Washington Post paywall
 // @author       deelawn
 // @include      /^http(s?)://((www\.)?)washingtonpost\.com/(.+)?/\d\d\d\d/(.+)$/
