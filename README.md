@@ -5,6 +5,10 @@ A collection of user scripts that can be installed using GreaseMonkey for Firefo
 Displays the volume to market cap ratio on coinmarketcap.com  
 https://greasyfork.org/en/scripts/31095-coin-market-cap-volume-to-market-cap-column
 
+### jishoaudio
+Adds a link to Jisho Japanese dictionary that plays the audio for words and sentences when clicked  
+https://greasyfork.org/en/scripts/39798-jisho-audio
+
 ### newyorktimespaywallbypass
 Allows you to read as many articles as you want on the New York Times website without being restricted by a paywall  
 https://greasyfork.org/en/scripts/38681-new-york-times-paywall-bypass
